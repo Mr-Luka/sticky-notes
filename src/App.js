@@ -1,33 +1,33 @@
 import React from "react";
 import "./index.css";
 
-const App = () => {
+const App = () => (
     <div>
-        <header>
-            <h1>Super Sticky Notes</h1>
-            <aside>
-                <button>+ New Note</button>
-                <input type="text" placeholder="Type here to seach..."/>
+        <header className="app-header">
+            <h1 className="app-header__title">Super Sticky Notes</h1>
+            <aside className="app-header__controls">
+                <button className="add-new">+ New Note</button>
+                <input className="search" type="text" placeholder="Type here to seach..."/>
             </aside>
         </header>
         <ul>
-            <li>
-                <input type="text" placeholder="Title"/>
-                <textarea placeholder="Description..."/>
-                <span>X</span>
+            <li className="note">
+                <input className="note__title" type="text" placeholder="Title"/>
+                <textarea className="note__description" placeholder="Description..."/>
+                <span className="note__delete">X</span>
             </li>
-            <li>
-                <input type="text" placeholder="Title"/>
-                <textarea placeholder="Description..."/>
-                <span>X</span>
+            <li className="note">
+                <input className="note__title" type="text" placeholder="Title"/>
+                <textarea className="note__description" placeholder="Description..."/>
+                <span className="note__delete">X</span>
             </li>
-            <li>
-                <input type="text" placeholder="Title"/>
-                <textarea placeholder="Description..."/>
-                <span>X</span>
+            <li className="note">
+                <input className="note__title" type="text" placeholder="Title"/>
+                <textarea className="note__description" placeholder="Description..."/>
+                <span className="note__delete">X</span>
             </li>
         </ul>
     </div>
-}
+);
 
 export default App;
