@@ -1,16 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
 import Note from "./Note.js";
 
-class NotesList extends Component {
-    render() {
-        return (
-            <ul>
-                <Note/>
-                <Note/>
-                <Note/>
-            </ul>
-        )
-    }
-}
+const NotesList =()=> (
+    <ul>
+        <Note/>
+        <Note/>
+        <Note/>
+    </ul>
+)
+
 
 export default NotesList;

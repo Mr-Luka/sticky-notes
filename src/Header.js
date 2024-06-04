@@ -1,8 +1,6 @@
-import React, {Component} from "react";
+import React from "react";
 
-class Header extends Component {
-    render() {
-        return (
+const Header = ()=> (
             <header className="app-header">
             <h1 className="app-header__title">Super Sticky Notes</h1>
             <aside className="app-header__controls">
@@ -10,8 +8,6 @@ class Header extends Component {
                 <input className="search" type="text" placeholder="Type here to seach..."/>
             </aside>
         </header>
-        )
-    }
-}
+)
 
 export default Header;
