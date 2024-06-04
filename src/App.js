@@ -10,6 +10,23 @@ const App = () => {
                 <input type="text" placeholder="Type here to seach..."/>
             </aside>
         </header>
+        <ul>
+            <li>
+                <input type="text" placeholder="Title"/>
+                <textarea placeholder="Description..."/>
+                <span>X</span>
+            </li>
+            <li>
+                <input type="text" placeholder="Title"/>
+                <textarea placeholder="Description..."/>
+                <span>X</span>
+            </li>
+            <li>
+                <input type="text" placeholder="Title"/>
+                <textarea placeholder="Description..."/>
+                <span>X</span>
+            </li>
+        </ul>
     </div>
 }
 
