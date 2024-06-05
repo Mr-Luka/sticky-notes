@@ -2,7 +2,7 @@ import React from "react";
 import Note from "./Note.js";
 
 const NotesList =()=> (
-    <ul>
+    <ul className="notes-list">
         <Note/>
         <Note/>
         <Note/>
