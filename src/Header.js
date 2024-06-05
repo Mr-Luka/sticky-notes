@@ -6,7 +6,6 @@ const Header = props=> (
             <aside className="app-header__controls">
                 <button className="add-new">+ New Note</button>
                 <input 
-                    value={props.searchText}
                     className="search" 
                     type="text" 
                     placeholder="Type here to seach..."/>
