@@ -26,6 +26,24 @@ class App extends Component {
         const newNotes = [newNote, ...this.state.notes];
         this.setState({notes: newNotes});
     }
+
+    onType = (editMeId, updateKey, updatedValue) => {
+        const updateNotes = this.state.notes.map((note)=>{
+            if (note.id !== editMeId) {
+                return note;
+            } else {
+                if(updateKey === "title") {
+                    note.title = updatedValue;
+                    return note;
+                } else {
+                    note.description = updatedValue;
+                    return note;
+                }
+            }
+        });
+        this.setState({notes: updateNotes})
+    }
+
     render () {
         return(
         <div>
