@@ -48,7 +48,7 @@ class App extends Component {
         return(
         <div>
             <Header searchText={this.state.searchText} addNote={this.addNote}/>
-            <NotesList notes={this.state.notes}/>
+            <NotesList notes={this.state.notes} onType = {this.onType}/>
         </div>
         )
     }
