@@ -28,6 +28,16 @@ class App extends Component {
      ],
      searchText: "",
     }
+    addNote = () => {
+        const newNote = {
+            id: Date.now(),
+            title: "",
+            description: "",
+            doesMatchSearch: true,
+            }
+        const newNotes = [newNote, ...this.state.notes];
+        this.setState({notes: newNotes});
+    }
     render () {
         return(
         <div>
