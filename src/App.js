@@ -32,8 +32,8 @@ class App extends Component {
 
         return (
           <div>
-            <Header/>
-            <NotesList/>
+            <Header searchText={this.state.searchText}/>
+            <NotesList notes={this.state.notes}/>
           </div>  
         );
     }
