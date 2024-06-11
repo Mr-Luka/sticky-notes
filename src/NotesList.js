@@ -3,8 +3,10 @@ import Note from "./Note.js"
 
 
 const NotesList = (props) =>{
+    const doesMatch = note=> note.doesMatchSearch;
+    const filteredElements = props.notes.filter(doesMatch)
     const renderNote = note => <Note note={note} key={note.id}/>
-    const noteElements = props.notes.map(renderNote);
+    const noteElements = filteredElements.map(renderNote);
 return (
     <ul className="notes-list">
         {noteElements}
