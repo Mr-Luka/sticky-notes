@@ -65,16 +65,16 @@ class App extends Component {
     this.setState({notes: updateNotes})
   }
 
-  ComponentDidUpdate() {
-    const stateString = JSON.stringify(this.state.notes);
-    localStorage.setItem("savedNotes", stateString);
+  componentDidUpdate() {
+    const stringifiedNotes = JSON.stringify(this.state.notes);
+    localStorage.setItem("savedNotes", stringifiedNotes);
   }
 
-  ComponentDidMount(){
-    const stateString = localStorage.getItem("savedNotes");
-    if(stateString) {
-        const savedNotes = JSON.parse(stateString);
-        this.setState({notes: savedNotes})
+  componentDidMount(){
+    const stringifiedNotes = localStorage.getItem("savedNotes");
+    if (stringifiedNotes) {
+      const savedNotes = JSON.parse(stringifiedNotes);
+      this.setState({ notes: savedNotes });
     }
   }
   render() {
