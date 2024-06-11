@@ -64,6 +64,19 @@ class App extends Component {
     const updateNotes = this.state.notes.filter(notIdMatch)
     this.setState({notes: updateNotes})
   }
+
+  ComponentDidUpdate() {
+    const stateString = JSON.stringify(this.state.notes);
+    localStorage.setItem("savedNotes", stateString);
+  }
+
+  ComponentDidMount(){
+    const stateString = localStorage.getItem("savedNotes");
+    if(stateString) {
+        const savedNotes = JSON.parse(stateString);
+        this.setState({notes: savedNotes})
+    }
+  }
   render() {
     return (
       <div>
