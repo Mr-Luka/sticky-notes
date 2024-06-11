@@ -13,7 +13,7 @@ const Header = (props) => (
                 className="search" 
                 type="text" 
                 placeholder="Type here to search"
-                value={props.state.searchText}
+                value={props.searchText}
                 />
         </aside>
     </header>
